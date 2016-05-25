@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'LYFramework'
-s.version = '1.0.0'
+s.version = '1.0.1'
 s.license = 'MIT'
 s.summary = 'useful method'
 s.homepage = 'https://github.com/loyinglin/LYFramework'
