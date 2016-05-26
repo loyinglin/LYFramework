@@ -14,14 +14,13 @@
 		FD5FCCDA1CF322D40094752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCD91CF322D40094752B /* Assets.xcassets */; };
 		FD5FCCDD1CF322D40094752B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCDB1CF322D40094752B /* LaunchScreen.storyboard */; };
 		FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */; };
-		FD5FCD051CF327B80094752B /* LYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCF71CF327B80094752B /* LYCoding.m */; };
-		FD5FCD061CF327B80094752B /* LYTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCF91CF327B80094752B /* LYTypeEncoding.m */; };
-		FD5FCD071CF327B80094752B /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCFB1CF327B80094752B /* NSDictionary+LYDictToObject.m */; };
-		FD5FCD081CF327B80094752B /* NSObject+LYTypeConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCFD1CF327B80094752B /* NSObject+LYTypeConversion.m */; };
-		FD5FCD091CF327B80094752B /* LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD001CF327B80094752B /* LYColor.m */; };
-		FD5FCD0A1CF327B80094752B /* LYDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD021CF327B80094752B /* LYDebug.m */; };
-		FD5FCD0B1CF327B80094752B /* NSObject+LYUITipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD041CF327B80094752B /* NSObject+LYUITipsView.m */; };
-		FD5FCD0E1CF32D970094752B /* LYTimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD0D1CF32D970094752B /* LYTimeUtil.m */; };
+		FD5FCD451CF5835B0094752B /* LYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD371CF5835B0094752B /* LYCoding.m */; };
+		FD5FCD461CF5835B0094752B /* LYTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD391CF5835B0094752B /* LYTypeEncoding.m */; };
+		FD5FCD471CF5835B0094752B /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD3B1CF5835B0094752B /* NSDictionary+LYDictToObject.m */; };
+		FD5FCD481CF5835B0094752B /* NSObject+LYTypeConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD3D1CF5835B0094752B /* NSObject+LYTypeConversion.m */; };
+		FD5FCD491CF5835B0094752B /* LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD401CF5835B0094752B /* LYColor.m */; };
+		FD5FCD4A1CF5835B0094752B /* LYDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD421CF5835B0094752B /* LYDebug.m */; };
+		FD5FCD4B1CF5835B0094752B /* NSObject+LYUITipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD441CF5835B0094752B /* NSObject+LYUITipsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,22 +47,20 @@
 		FD5FCCE31CF322D50094752B /* LYFrameworkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFrameworkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFrameworkDemoTests.m; sourceTree = "<group>"; };
 		FD5FCCE91CF322D50094752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD5FCCF61CF327B80094752B /* LYCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCoding.h; sourceTree = "<group>"; };
-		FD5FCCF71CF327B80094752B /* LYCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCoding.m; sourceTree = "<group>"; };
-		FD5FCCF81CF327B80094752B /* LYTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTypeEncoding.h; sourceTree = "<group>"; };
-		FD5FCCF91CF327B80094752B /* LYTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTypeEncoding.m; sourceTree = "<group>"; };
-		FD5FCCFA1CF327B80094752B /* NSDictionary+LYDictToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LYDictToObject.h"; sourceTree = "<group>"; };
-		FD5FCCFB1CF327B80094752B /* NSDictionary+LYDictToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LYDictToObject.m"; sourceTree = "<group>"; };
-		FD5FCCFC1CF327B80094752B /* NSObject+LYTypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYTypeConversion.h"; sourceTree = "<group>"; };
-		FD5FCCFD1CF327B80094752B /* NSObject+LYTypeConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYTypeConversion.m"; sourceTree = "<group>"; };
-		FD5FCCFF1CF327B80094752B /* LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYColor.h; sourceTree = "<group>"; };
-		FD5FCD001CF327B80094752B /* LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYColor.m; sourceTree = "<group>"; };
-		FD5FCD011CF327B80094752B /* LYDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDebug.h; sourceTree = "<group>"; };
-		FD5FCD021CF327B80094752B /* LYDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDebug.m; sourceTree = "<group>"; };
-		FD5FCD031CF327B80094752B /* NSObject+LYUITipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYUITipsView.h"; sourceTree = "<group>"; };
-		FD5FCD041CF327B80094752B /* NSObject+LYUITipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYUITipsView.m"; sourceTree = "<group>"; };
-		FD5FCD0C1CF32D970094752B /* LYTimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTimeUtil.h; sourceTree = "<group>"; };
-		FD5FCD0D1CF32D970094752B /* LYTimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTimeUtil.m; sourceTree = "<group>"; };
+		FD5FCD361CF5835B0094752B /* LYCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCoding.h; sourceTree = "<group>"; };
+		FD5FCD371CF5835B0094752B /* LYCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCoding.m; sourceTree = "<group>"; };
+		FD5FCD381CF5835B0094752B /* LYTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTypeEncoding.h; sourceTree = "<group>"; };
+		FD5FCD391CF5835B0094752B /* LYTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTypeEncoding.m; sourceTree = "<group>"; };
+		FD5FCD3A1CF5835B0094752B /* NSDictionary+LYDictToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LYDictToObject.h"; sourceTree = "<group>"; };
+		FD5FCD3B1CF5835B0094752B /* NSDictionary+LYDictToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LYDictToObject.m"; sourceTree = "<group>"; };
+		FD5FCD3C1CF5835B0094752B /* NSObject+LYTypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYTypeConversion.h"; sourceTree = "<group>"; };
+		FD5FCD3D1CF5835B0094752B /* NSObject+LYTypeConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYTypeConversion.m"; sourceTree = "<group>"; };
+		FD5FCD3F1CF5835B0094752B /* LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYColor.h; sourceTree = "<group>"; };
+		FD5FCD401CF5835B0094752B /* LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYColor.m; sourceTree = "<group>"; };
+		FD5FCD411CF5835B0094752B /* LYDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDebug.h; sourceTree = "<group>"; };
+		FD5FCD421CF5835B0094752B /* LYDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDebug.m; sourceTree = "<group>"; };
+		FD5FCD431CF5835B0094752B /* NSObject+LYUITipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYUITipsView.h"; sourceTree = "<group>"; };
+		FD5FCD441CF5835B0094752B /* NSObject+LYUITipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYUITipsView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +102,7 @@
 		FD5FCCCC1CF322D40094752B /* LYFrameworkDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCCF41CF327B80094752B /* LYFramework */,
+				FD5FCD341CF5835B0094752B /* LYFramework */,
 				FD5FCCD01CF322D40094752B /* AppDelegate.h */,
 				FD5FCCD11CF322D40094752B /* AppDelegate.m */,
 				FD5FCCD31CF322D40094752B /* ViewController.h */,
@@ -136,41 +133,39 @@
 			path = LYFrameworkDemoTests;
 			sourceTree = "<group>";
 		};
-		FD5FCCF41CF327B80094752B /* LYFramework */ = {
+		FD5FCD341CF5835B0094752B /* LYFramework */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCCF51CF327B80094752B /* Core */,
-				FD5FCCFE1CF327B80094752B /* UIKit */,
+				FD5FCD351CF5835B0094752B /* Core */,
+				FD5FCD3E1CF5835B0094752B /* UIKit */,
 			);
 			path = LYFramework;
 			sourceTree = "<group>";
 		};
-		FD5FCCF51CF327B80094752B /* Core */ = {
+		FD5FCD351CF5835B0094752B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCCF61CF327B80094752B /* LYCoding.h */,
-				FD5FCCF71CF327B80094752B /* LYCoding.m */,
-				FD5FCCF81CF327B80094752B /* LYTypeEncoding.h */,
-				FD5FCCF91CF327B80094752B /* LYTypeEncoding.m */,
-				FD5FCCFA1CF327B80094752B /* NSDictionary+LYDictToObject.h */,
-				FD5FCCFB1CF327B80094752B /* NSDictionary+LYDictToObject.m */,
-				FD5FCCFC1CF327B80094752B /* NSObject+LYTypeConversion.h */,
-				FD5FCCFD1CF327B80094752B /* NSObject+LYTypeConversion.m */,
-				FD5FCD0C1CF32D970094752B /* LYTimeUtil.h */,
-				FD5FCD0D1CF32D970094752B /* LYTimeUtil.m */,
+				FD5FCD361CF5835B0094752B /* LYCoding.h */,
+				FD5FCD371CF5835B0094752B /* LYCoding.m */,
+				FD5FCD381CF5835B0094752B /* LYTypeEncoding.h */,
+				FD5FCD391CF5835B0094752B /* LYTypeEncoding.m */,
+				FD5FCD3A1CF5835B0094752B /* NSDictionary+LYDictToObject.h */,
+				FD5FCD3B1CF5835B0094752B /* NSDictionary+LYDictToObject.m */,
+				FD5FCD3C1CF5835B0094752B /* NSObject+LYTypeConversion.h */,
+				FD5FCD3D1CF5835B0094752B /* NSObject+LYTypeConversion.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		FD5FCCFE1CF327B80094752B /* UIKit */ = {
+		FD5FCD3E1CF5835B0094752B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCCFF1CF327B80094752B /* LYColor.h */,
-				FD5FCD001CF327B80094752B /* LYColor.m */,
-				FD5FCD011CF327B80094752B /* LYDebug.h */,
-				FD5FCD021CF327B80094752B /* LYDebug.m */,
-				FD5FCD031CF327B80094752B /* NSObject+LYUITipsView.h */,
-				FD5FCD041CF327B80094752B /* NSObject+LYUITipsView.m */,
+				FD5FCD3F1CF5835B0094752B /* LYColor.h */,
+				FD5FCD401CF5835B0094752B /* LYColor.m */,
+				FD5FCD411CF5835B0094752B /* LYDebug.h */,
+				FD5FCD421CF5835B0094752B /* LYDebug.m */,
+				FD5FCD431CF5835B0094752B /* NSObject+LYUITipsView.h */,
+				FD5FCD441CF5835B0094752B /* NSObject+LYUITipsView.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -275,17 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5FCD0A1CF327B80094752B /* LYDebug.m in Sources */,
-				FD5FCD0B1CF327B80094752B /* NSObject+LYUITipsView.m in Sources */,
-				FD5FCD091CF327B80094752B /* LYColor.m in Sources */,
+				FD5FCD4A1CF5835B0094752B /* LYDebug.m in Sources */,
+				FD5FCD4B1CF5835B0094752B /* NSObject+LYUITipsView.m in Sources */,
+				FD5FCD491CF5835B0094752B /* LYColor.m in Sources */,
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
-				FD5FCD081CF327B80094752B /* NSObject+LYTypeConversion.m in Sources */,
+				FD5FCD481CF5835B0094752B /* NSObject+LYTypeConversion.m in Sources */,
 				FD5FCCD21CF322D40094752B /* AppDelegate.m in Sources */,
-				FD5FCD051CF327B80094752B /* LYCoding.m in Sources */,
-				FD5FCD061CF327B80094752B /* LYTypeEncoding.m in Sources */,
+				FD5FCD451CF5835B0094752B /* LYCoding.m in Sources */,
+				FD5FCD461CF5835B0094752B /* LYTypeEncoding.m in Sources */,
 				FD5FCCCF1CF322D40094752B /* main.m in Sources */,
-				FD5FCD071CF327B80094752B /* NSDictionary+LYDictToObject.m in Sources */,
-				FD5FCD0E1CF32D970094752B /* LYTimeUtil.m in Sources */,
+				FD5FCD471CF5835B0094752B /* NSDictionary+LYDictToObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

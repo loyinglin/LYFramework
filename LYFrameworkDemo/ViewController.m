@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LYFramework/Core/NSDictionary+LYDictToObject.h"
+#import "NSDictionary+LYDictToObject.h"
 
 @interface ViewController ()
 
