@@ -14,13 +14,16 @@
 		FD5FCCDA1CF322D40094752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCD91CF322D40094752B /* Assets.xcassets */; };
 		FD5FCCDD1CF322D40094752B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCDB1CF322D40094752B /* LaunchScreen.storyboard */; };
 		FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */; };
-		FD5FCD451CF5835B0094752B /* LYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD371CF5835B0094752B /* LYCoding.m */; };
-		FD5FCD461CF5835B0094752B /* LYTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD391CF5835B0094752B /* LYTypeEncoding.m */; };
-		FD5FCD471CF5835B0094752B /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD3B1CF5835B0094752B /* NSDictionary+LYDictToObject.m */; };
-		FD5FCD481CF5835B0094752B /* NSObject+LYTypeConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD3D1CF5835B0094752B /* NSObject+LYTypeConversion.m */; };
-		FD5FCD491CF5835B0094752B /* LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD401CF5835B0094752B /* LYColor.m */; };
-		FD5FCD4A1CF5835B0094752B /* LYDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD421CF5835B0094752B /* LYDebug.m */; };
-		FD5FCD4B1CF5835B0094752B /* NSObject+LYUITipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCD441CF5835B0094752B /* NSObject+LYUITipsView.m */; };
+		FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */; };
+		FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC301D20D20800C5C1A4 /* IPAddressUtil.m */; };
+		FD65AC451D20D20800C5C1A4 /* LYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC331D20D20800C5C1A4 /* LYCoding.m */; };
+		FD65AC461D20D20800C5C1A4 /* LYTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC351D20D20800C5C1A4 /* LYTypeEncoding.m */; };
+		FD65AC471D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC371D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m */; };
+		FD65AC481D20D20800C5C1A4 /* NSObject+LYTypeConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC391D20D20800C5C1A4 /* NSObject+LYTypeConversion.m */; };
+		FD65AC491D20D20800C5C1A4 /* LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC3C1D20D20800C5C1A4 /* LYColor.m */; };
+		FD65AC4A1D20D20800C5C1A4 /* LYDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC3E1D20D20800C5C1A4 /* LYDebug.m */; };
+		FD65AC4B1D20D20800C5C1A4 /* NSObject+LYUITipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC401D20D20800C5C1A4 /* NSObject+LYUITipsView.m */; };
+		FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC421D20D20800C5C1A4 /* UIImage+Blur.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,20 +50,26 @@
 		FD5FCCE31CF322D50094752B /* LYFrameworkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFrameworkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFrameworkDemoTests.m; sourceTree = "<group>"; };
 		FD5FCCE91CF322D50094752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD5FCD361CF5835B0094752B /* LYCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCoding.h; sourceTree = "<group>"; };
-		FD5FCD371CF5835B0094752B /* LYCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCoding.m; sourceTree = "<group>"; };
-		FD5FCD381CF5835B0094752B /* LYTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTypeEncoding.h; sourceTree = "<group>"; };
-		FD5FCD391CF5835B0094752B /* LYTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTypeEncoding.m; sourceTree = "<group>"; };
-		FD5FCD3A1CF5835B0094752B /* NSDictionary+LYDictToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LYDictToObject.h"; sourceTree = "<group>"; };
-		FD5FCD3B1CF5835B0094752B /* NSDictionary+LYDictToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LYDictToObject.m"; sourceTree = "<group>"; };
-		FD5FCD3C1CF5835B0094752B /* NSObject+LYTypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYTypeConversion.h"; sourceTree = "<group>"; };
-		FD5FCD3D1CF5835B0094752B /* NSObject+LYTypeConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYTypeConversion.m"; sourceTree = "<group>"; };
-		FD5FCD3F1CF5835B0094752B /* LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYColor.h; sourceTree = "<group>"; };
-		FD5FCD401CF5835B0094752B /* LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYColor.m; sourceTree = "<group>"; };
-		FD5FCD411CF5835B0094752B /* LYDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDebug.h; sourceTree = "<group>"; };
-		FD5FCD421CF5835B0094752B /* LYDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDebug.m; sourceTree = "<group>"; };
-		FD5FCD431CF5835B0094752B /* NSObject+LYUITipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYUITipsView.h"; sourceTree = "<group>"; };
-		FD5FCD441CF5835B0094752B /* NSObject+LYUITipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYUITipsView.m"; sourceTree = "<group>"; };
+		FD65AC2D1D20D20800C5C1A4 /* ChatUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUtil.h; sourceTree = "<group>"; };
+		FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUtil.m; sourceTree = "<group>"; };
+		FD65AC2F1D20D20800C5C1A4 /* IPAddressUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddressUtil.h; sourceTree = "<group>"; };
+		FD65AC301D20D20800C5C1A4 /* IPAddressUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddressUtil.m; sourceTree = "<group>"; };
+		FD65AC321D20D20800C5C1A4 /* LYCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCoding.h; sourceTree = "<group>"; };
+		FD65AC331D20D20800C5C1A4 /* LYCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCoding.m; sourceTree = "<group>"; };
+		FD65AC341D20D20800C5C1A4 /* LYTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTypeEncoding.h; sourceTree = "<group>"; };
+		FD65AC351D20D20800C5C1A4 /* LYTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTypeEncoding.m; sourceTree = "<group>"; };
+		FD65AC361D20D20800C5C1A4 /* NSDictionary+LYDictToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LYDictToObject.h"; sourceTree = "<group>"; };
+		FD65AC371D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LYDictToObject.m"; sourceTree = "<group>"; };
+		FD65AC381D20D20800C5C1A4 /* NSObject+LYTypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYTypeConversion.h"; sourceTree = "<group>"; };
+		FD65AC391D20D20800C5C1A4 /* NSObject+LYTypeConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYTypeConversion.m"; sourceTree = "<group>"; };
+		FD65AC3B1D20D20800C5C1A4 /* LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYColor.h; sourceTree = "<group>"; };
+		FD65AC3C1D20D20800C5C1A4 /* LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYColor.m; sourceTree = "<group>"; };
+		FD65AC3D1D20D20800C5C1A4 /* LYDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDebug.h; sourceTree = "<group>"; };
+		FD65AC3E1D20D20800C5C1A4 /* LYDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDebug.m; sourceTree = "<group>"; };
+		FD65AC3F1D20D20800C5C1A4 /* NSObject+LYUITipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYUITipsView.h"; sourceTree = "<group>"; };
+		FD65AC401D20D20800C5C1A4 /* NSObject+LYUITipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYUITipsView.m"; sourceTree = "<group>"; };
+		FD65AC411D20D20800C5C1A4 /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		FD65AC421D20D20800C5C1A4 /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +111,7 @@
 		FD5FCCCC1CF322D40094752B /* LYFrameworkDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCD341CF5835B0094752B /* LYFramework */,
+				FD65AC2B1D20D20800C5C1A4 /* LYFramework */,
 				FD5FCCD01CF322D40094752B /* AppDelegate.h */,
 				FD5FCCD11CF322D40094752B /* AppDelegate.m */,
 				FD5FCCD31CF322D40094752B /* ViewController.h */,
@@ -133,39 +142,53 @@
 			path = LYFrameworkDemoTests;
 			sourceTree = "<group>";
 		};
-		FD5FCD341CF5835B0094752B /* LYFramework */ = {
+		FD65AC2B1D20D20800C5C1A4 /* LYFramework */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCD351CF5835B0094752B /* Core */,
-				FD5FCD3E1CF5835B0094752B /* UIKit */,
+				FD65AC2C1D20D20800C5C1A4 /* Business */,
+				FD65AC311D20D20800C5C1A4 /* Core */,
+				FD65AC3A1D20D20800C5C1A4 /* UIKit */,
 			);
 			path = LYFramework;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		FD5FCD351CF5835B0094752B /* Core */ = {
+		FD65AC2C1D20D20800C5C1A4 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCD361CF5835B0094752B /* LYCoding.h */,
-				FD5FCD371CF5835B0094752B /* LYCoding.m */,
-				FD5FCD381CF5835B0094752B /* LYTypeEncoding.h */,
-				FD5FCD391CF5835B0094752B /* LYTypeEncoding.m */,
-				FD5FCD3A1CF5835B0094752B /* NSDictionary+LYDictToObject.h */,
-				FD5FCD3B1CF5835B0094752B /* NSDictionary+LYDictToObject.m */,
-				FD5FCD3C1CF5835B0094752B /* NSObject+LYTypeConversion.h */,
-				FD5FCD3D1CF5835B0094752B /* NSObject+LYTypeConversion.m */,
+				FD65AC2D1D20D20800C5C1A4 /* ChatUtil.h */,
+				FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */,
+				FD65AC2F1D20D20800C5C1A4 /* IPAddressUtil.h */,
+				FD65AC301D20D20800C5C1A4 /* IPAddressUtil.m */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		FD65AC311D20D20800C5C1A4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FD65AC321D20D20800C5C1A4 /* LYCoding.h */,
+				FD65AC331D20D20800C5C1A4 /* LYCoding.m */,
+				FD65AC341D20D20800C5C1A4 /* LYTypeEncoding.h */,
+				FD65AC351D20D20800C5C1A4 /* LYTypeEncoding.m */,
+				FD65AC361D20D20800C5C1A4 /* NSDictionary+LYDictToObject.h */,
+				FD65AC371D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m */,
+				FD65AC381D20D20800C5C1A4 /* NSObject+LYTypeConversion.h */,
+				FD65AC391D20D20800C5C1A4 /* NSObject+LYTypeConversion.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		FD5FCD3E1CF5835B0094752B /* UIKit */ = {
+		FD65AC3A1D20D20800C5C1A4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCD3F1CF5835B0094752B /* LYColor.h */,
-				FD5FCD401CF5835B0094752B /* LYColor.m */,
-				FD5FCD411CF5835B0094752B /* LYDebug.h */,
-				FD5FCD421CF5835B0094752B /* LYDebug.m */,
-				FD5FCD431CF5835B0094752B /* NSObject+LYUITipsView.h */,
-				FD5FCD441CF5835B0094752B /* NSObject+LYUITipsView.m */,
+				FD65AC3B1D20D20800C5C1A4 /* LYColor.h */,
+				FD65AC3C1D20D20800C5C1A4 /* LYColor.m */,
+				FD65AC3D1D20D20800C5C1A4 /* LYDebug.h */,
+				FD65AC3E1D20D20800C5C1A4 /* LYDebug.m */,
+				FD65AC3F1D20D20800C5C1A4 /* NSObject+LYUITipsView.h */,
+				FD65AC401D20D20800C5C1A4 /* NSObject+LYUITipsView.m */,
+				FD65AC411D20D20800C5C1A4 /* UIImage+Blur.h */,
+				FD65AC421D20D20800C5C1A4 /* UIImage+Blur.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -270,16 +293,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5FCD4A1CF5835B0094752B /* LYDebug.m in Sources */,
-				FD5FCD4B1CF5835B0094752B /* NSObject+LYUITipsView.m in Sources */,
-				FD5FCD491CF5835B0094752B /* LYColor.m in Sources */,
+				FD65AC4A1D20D20800C5C1A4 /* LYDebug.m in Sources */,
+				FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */,
+				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,
+				FD65AC471D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m in Sources */,
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
-				FD5FCD481CF5835B0094752B /* NSObject+LYTypeConversion.m in Sources */,
+				FD65AC481D20D20800C5C1A4 /* NSObject+LYTypeConversion.m in Sources */,
+				FD65AC461D20D20800C5C1A4 /* LYTypeEncoding.m in Sources */,
+				FD65AC4B1D20D20800C5C1A4 /* NSObject+LYUITipsView.m in Sources */,
 				FD5FCCD21CF322D40094752B /* AppDelegate.m in Sources */,
-				FD5FCD451CF5835B0094752B /* LYCoding.m in Sources */,
-				FD5FCD461CF5835B0094752B /* LYTypeEncoding.m in Sources */,
 				FD5FCCCF1CF322D40094752B /* main.m in Sources */,
-				FD5FCD471CF5835B0094752B /* NSDictionary+LYDictToObject.m in Sources */,
+				FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */,
+				FD65AC491D20D20800C5C1A4 /* LYColor.m in Sources */,
+				FD65AC451D20D20800C5C1A4 /* LYCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,6 +34,8 @@
 
 - (id)objectForClass:(Class)clazz
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wundeclared-selector"
     if ( [clazz respondsToSelector:@selector(initFromDictionary:)] )
     {
         return [clazz performSelector:@selector(initFromDictionary:) withObject:self];
@@ -43,6 +45,8 @@
     {
         return [clazz performSelector:@selector(fromDictionary:) withObject:self];
     }
+    //写在这个中间的代码,都不会被编译器提示-Wdeprecated-declarations类型的警告
+#pragma clang diagnostic pop
     
     id object = [[clazz alloc] init];
     if ( nil == object )
@@ -88,7 +92,10 @@
                         SEL convertSelector = NSSelectorFromString( [NSString stringWithFormat:@"convertPropertyClassFor_%@", propertyName] );
                         if ( [clazz respondsToSelector:convertSelector] )
                         {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
                             Class convertClass = [clazz performSelector:convertSelector];
+#pragma clang diagnostic pop
                             if ( convertClass )
                             {
                                 NSMutableArray * arrayTemp = [NSMutableArray array];
@@ -121,7 +128,10 @@
                         SEL convertSelector = NSSelectorFromString( [NSString stringWithFormat:@"convertPropertyClassFor_%@", propertyName] );
                         if ( [clazz respondsToSelector:convertSelector] )
                         {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
                             Class convertClass = [clazz performSelector:convertSelector];
+#pragma clang diagnostic pop
                             if ( convertClass )
                             {
                                 value = [(NSDictionary *)tempValue objectForClass:convertClass];

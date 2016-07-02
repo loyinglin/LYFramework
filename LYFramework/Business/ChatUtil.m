@@ -55,8 +55,8 @@
 - (NSString *)getFilterStringWithSrc:(NSString *)srcString {
     if (srcString) {
         for (NSString* filterString in self.mFilterArray) {
-            NSString* tmpString = [filterString stringByReplacingRegex:@"." with:@"*" caseInsensitive:NO];
-            srcString = [srcString stringByReplacing:filterString with:tmpString];
+            NSString* tmpString = [filterString stringByReplacingOccurrencesOfString:@"." withString:@"*" options:NSRegularExpressionSearch | NSCaseInsensitiveSearch range:NSMakeRange(0, filterString.length)];
+            srcString = [srcString stringByReplacingOccurrencesOfString:filterString withString:tmpString];
         }
     }
     return srcString;
