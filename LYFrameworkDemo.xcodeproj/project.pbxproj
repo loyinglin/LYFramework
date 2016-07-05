@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */; };
 		FD5FCCCF1CF322D40094752B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCCE1CF322D40094752B /* main.m */; };
 		FD5FCCD21CF322D40094752B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCD11CF322D40094752B /* AppDelegate.m */; };
 		FD5FCCD51CF322D40094752B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCD41CF322D40094752B /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUtilTest.m; sourceTree = "<group>"; };
 		FD5FCCCA1CF322D40094752B /* LYFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5FCCCE1CF322D40094752B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD5FCCD01CF322D40094752B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */,
 				FD5FCCE91CF322D50094752B /* Info.plist */,
+				FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */,
 			);
 			path = LYFrameworkDemoTests;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */,
+				FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

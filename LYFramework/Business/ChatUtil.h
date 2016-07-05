@@ -24,7 +24,19 @@
 
 - (NSString *)getFilterStringWithSrc:(NSString *)srcString;
 
+- (BOOL)vaildateWeixinID:(NSString *)weixin;
 
+- (BOOL)validateEmail:(NSString *)email;
+
+- (BOOL)validateMobile:(NSString *)mobile;
+
+- (BOOL)validateUserName:(NSString *)name;
+
+- (BOOL)validatePassword:(NSString *)passWord;
+
+- (BOOL)validateNickname:(NSString *)nickname;
+
+- (BOOL)validateIdentityCard:(NSString *)identityCard;
 #pragma mark - message
 
 
