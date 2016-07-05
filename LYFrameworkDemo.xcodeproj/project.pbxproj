@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */; };
+		FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426DF1D2B834C003BC203 /* CVUtil.m */; };
+		FD3426E21D2B8477003BC203 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3426E11D2B8477003BC203 /* abc.png */; };
 		FD5FCCCF1CF322D40094752B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCCE1CF322D40094752B /* main.m */; };
 		FD5FCCD21CF322D40094752B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCD11CF322D40094752B /* AppDelegate.m */; };
 		FD5FCCD51CF322D40094752B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCD41CF322D40094752B /* ViewController.m */; };
@@ -39,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUtilTest.m; sourceTree = "<group>"; };
+		FD3426DE1D2B834C003BC203 /* CVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUtil.h; sourceTree = "<group>"; };
+		FD3426DF1D2B834C003BC203 /* CVUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVUtil.m; sourceTree = "<group>"; };
+		FD3426E11D2B8477003BC203 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = SOURCE_ROOT; };
 		FD5FCCCA1CF322D40094752B /* LYFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5FCCCE1CF322D40094752B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD5FCCD01CF322D40094752B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 		FD5FCCCD1CF322D40094752B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD3426E11D2B8477003BC203 /* abc.png */,
 				FD5FCCCE1CF322D40094752B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,6 +168,8 @@
 				FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */,
 				FD65AC2F1D20D20800C5C1A4 /* IPAddressUtil.h */,
 				FD65AC301D20D20800C5C1A4 /* IPAddressUtil.m */,
+				FD3426DE1D2B834C003BC203 /* CVUtil.h */,
+				FD3426DF1D2B834C003BC203 /* CVUtil.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3426E21D2B8477003BC203 /* abc.png in Resources */,
 				FD5FCCDD1CF322D40094752B /* LaunchScreen.storyboard in Resources */,
 				FD5FCCDA1CF322D40094752B /* Assets.xcassets in Resources */,
 				FD5FCCD81CF322D40094752B /* Main.storyboard in Resources */,
@@ -308,6 +317,7 @@
 				FD5FCCCF1CF322D40094752B /* main.m in Sources */,
 				FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */,
 				FD65AC491D20D20800C5C1A4 /* LYColor.m in Sources */,
+				FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */,
 				FD65AC451D20D20800C5C1A4 /* LYCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
