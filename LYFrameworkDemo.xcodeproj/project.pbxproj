@@ -17,6 +17,7 @@
 		FD5FCCDA1CF322D40094752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCD91CF322D40094752B /* Assets.xcassets */; };
 		FD5FCCDD1CF322D40094752B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCDB1CF322D40094752B /* LaunchScreen.storyboard */; };
 		FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */; };
+		FD64158B1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD64158A1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m */; };
 		FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */; };
 		FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC301D20D20800C5C1A4 /* IPAddressUtil.m */; };
 		FD65AC451D20D20800C5C1A4 /* LYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC331D20D20800C5C1A4 /* LYCoding.m */; };
@@ -61,6 +62,8 @@
 		FD5FCCE31CF322D50094752B /* LYFrameworkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFrameworkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFrameworkDemoTests.m; sourceTree = "<group>"; };
 		FD5FCCE91CF322D50094752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD6415891D2E45A10067D592 /* UIViewController+YingYingImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YingYingImagePickerController.h"; sourceTree = "<group>"; };
+		FD64158A1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YingYingImagePickerController.m"; sourceTree = "<group>"; };
 		FD65AC2D1D20D20800C5C1A4 /* ChatUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUtil.h; sourceTree = "<group>"; };
 		FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUtil.m; sourceTree = "<group>"; };
 		FD65AC2F1D20D20800C5C1A4 /* IPAddressUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddressUtil.h; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 		FD65AC3A1D20D20800C5C1A4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FD6415891D2E45A10067D592 /* UIViewController+YingYingImagePickerController.h */,
+				FD64158A1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m */,
 				FD65AC3B1D20D20800C5C1A4 /* LYColor.h */,
 				FD65AC3C1D20D20800C5C1A4 /* LYColor.m */,
 				FD65AC3D1D20D20800C5C1A4 /* LYDebug.h */,
@@ -343,6 +348,7 @@
 				FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */,
 				FD65AC491D20D20800C5C1A4 /* LYColor.m in Sources */,
 				FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */,
+				FD64158B1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m in Sources */,
 				FD65AC451D20D20800C5C1A4 /* LYCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
