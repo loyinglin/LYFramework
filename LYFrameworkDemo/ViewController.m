@@ -12,6 +12,7 @@
 #import "RuntimeUtil.h"
 #import "TimeUtil.h"
 #import "LYRACDefine.h"
+#import "UIViewController+YingYingImagePickerController.h"
 
 @interface ViewController ()
 
@@ -20,41 +21,33 @@
 @implementation ViewController
 
 + (void)load {
-    [[RuntimeUtil shareInstance] swizzleInstanceMethodWithClass:[self class] OriginSEL:@selector(selector) NewSEL:@selector(selectorNew)];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    NSDictionary* dict = @{@"abc":@"abc"};
-    [dict objectForClass:[NSNumber class]];
     
-    UIImage *image = [UIImage imageNamed:@"abc"];
-    CVPixelBufferRef buffer = [[CVUtil shareInstance] getPixelBufferFromCGImage:image.CGImage];
-    image = [[CVUtil shareInstance] getImageFromPixelBuffer:buffer];
-    
-    if (buffer) { //不加内存泄露
-        CFRelease(buffer);
-    }
-    
-    [self.view addSubview:[[UIImageView alloc] initWithImage:image]];
     
     @weakify(self);
-    [[TimeUtil shareInstance] getBlockExecuteTime:^{
+    [[NSNotificationCenter defaultCenter] addObserverForName:NOTIFY_UI_IMAGE_PICKER_DONE object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         @strongify(self);
-        [self selector];
+        if ([note.object isKindOfClass:[UIImage class]]) {
+            UIView* view = [[UIImageView alloc] initWithImage:note.object];
+            [self.view insertSubview:view atIndex:0];
+        }
     }];
     
-    [self selector];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:@"加载" forState:UIControlStateNormal];
+    [button setFrame:CGRectMake(100, 100, 100, 100)];
+    [button addTarget:self action:@selector(lyModalChoosePicker) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button];
 }
 
-- (void)selector {
-    NSLog(@"selector");
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
-- (void)selectorNew {
-    NSLog(@"selectorNew");
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

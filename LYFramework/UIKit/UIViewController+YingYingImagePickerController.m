@@ -50,6 +50,7 @@
 
 -(void)takePhoto
 {
+    // 方法已经被禁用
 //    if([ALAssetsLibrary authorizationStatus]==ALAuthorizationStatusRestricted||[ALAssetsLibrary authorizationStatus]==ALAuthorizationStatusDenied)
 //    {
 //        
@@ -74,6 +75,13 @@
         //设置拍照后的图片可被编辑
         picker.allowsEditing = YES;
         picker.sourceType = sourceType;
+        
+        
+        
+//        if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+//            self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+//        }
+        
         [self presentViewController:picker animated:YES completion:nil];
     }else
     {
