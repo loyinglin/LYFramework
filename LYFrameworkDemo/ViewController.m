@@ -12,6 +12,7 @@
 #import "RuntimeUtil.h"
 #import "TimeUtil.h"
 #import "LYRACDefine.h"
+#import "UIImage+LYUtil.h"
 #import "UIViewController+YingYingImagePickerController.h"
 
 @interface ViewController ()
@@ -27,12 +28,15 @@
     [super viewDidLoad];
     
     
+    UIImageView* imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    [self.view insertSubview:imageView atIndex:0];
+    
     @weakify(self);
     [[NSNotificationCenter defaultCenter] addObserverForName:NOTIFY_UI_IMAGE_PICKER_DONE object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         @strongify(self);
         if ([note.object isKindOfClass:[UIImage class]]) {
-            UIView* view = [[UIImageView alloc] initWithImage:note.object];
-            [self.view insertSubview:view atIndex:0];
+//            UIView* view = [[UIImageView alloc] initWithImage:[(UIImage *)note.object lyChangeSizeWithMaxSize:CGSizeMake(640, 640)]];
+            imageView.image = note.object;
         }
     }];
     

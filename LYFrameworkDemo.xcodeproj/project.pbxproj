@@ -32,6 +32,7 @@
 		FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */; };
 		FDA87D461D2CE9D900382EAB /* RuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */; };
 		FDA87D4F1D2D03D200382EAB /* LYDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D4E1D2D03D200382EAB /* LYDefine.m */; };
+		FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC638061D349350002F40BE /* UIImage+LYUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		FDA87D4C1D2CF84800382EAB /* LYRACDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRACDefine.h; sourceTree = "<group>"; };
 		FDA87D4D1D2CFED300382EAB /* LYDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDefine.h; sourceTree = "<group>"; };
 		FDA87D4E1D2D03D200382EAB /* LYDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDefine.m; sourceTree = "<group>"; };
+		FDC638051D349350002F40BE /* UIImage+LYUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYUtil.h"; sourceTree = "<group>"; };
+		FDC638061D349350002F40BE /* UIImage+LYUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYUtil.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				FD65AC401D20D20800C5C1A4 /* NSObject+LYUITipsView.m */,
 				FD65AC411D20D20800C5C1A4 /* UIImage+Blur.h */,
 				FD65AC421D20D20800C5C1A4 /* UIImage+Blur.m */,
+				FDC638051D349350002F40BE /* UIImage+LYUtil.h */,
+				FDC638061D349350002F40BE /* UIImage+LYUtil.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */,
 				FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */,
 				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,
+				FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */,
 				FD65AC471D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m in Sources */,
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
 				FD65AC481D20D20800C5C1A4 /* NSObject+LYTypeConversion.m in Sources */,

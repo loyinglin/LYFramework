@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+YingYingImagePickerController.h"
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation UIViewController (YingYingImagePickerController)
@@ -25,32 +25,62 @@
 
 
 - (void)lyModalChoosePicker {
-    UIAlertController* controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    @weakify(self);
-    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"cancel");
-    }];
-    [controller addAction:cancel];
-    
-    UIAlertAction* takePhoto = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        @strongify(self);
-        [self takePhoto];
-    }];
-    [controller addAction:takePhoto];
-    
-    UIAlertAction* localPhoto = [UIAlertAction actionWithTitle:@"从手机相册中选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        @strongify(self);
-        [self LocalPhoto];
-    }];
-    [controller addAction:localPhoto];
-    
-    [self presentViewController:controller animated:YES completion:nil];
+    if ([[UIDevice currentDevice].model rangeOfString:@"iPhone" options:NSCaseInsensitiveSearch].location != NSNotFound && NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_8_0) {
+        UIAlertController* controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        @weakify(self);
+        UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"cancel");
+        }];
+        [controller addAction:cancel];
+        
+        UIAlertAction* takePhoto = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            @strongify(self);
+            [self takePhoto];
+        }];
+        [controller addAction:takePhoto];
+        
+        UIAlertAction* localPhoto = [UIAlertAction actionWithTitle:@"从相册中选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            @strongify(self);
+            [self LocalPhoto];
+        }];
+        [controller addAction:localPhoto];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+    else {
+        UIActionSheet *myActionSheet = [[UIActionSheet alloc]
+                                        initWithTitle:nil
+                                        delegate:self
+                                        cancelButtonTitle:@"取消"
+                                        destructiveButtonTitle:nil
+                                        otherButtonTitles: @"从相册选择", @"拍照",nil];
+        if(self.view) {
+            [myActionSheet showInView:self.view];
+        }
+    }
+}
+
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            //从相册选择
+            [self LocalPhoto];
+            break;
+        case 1:
+            //拍照
+            [self takePhoto];
+            break;
+         
+        default:
+            break;
+    }
 }
 #pragma mark - ui
 
 -(void)takePhoto
 {
-    // 方法已经被禁用
 //    if([ALAssetsLibrary authorizationStatus]==ALAuthorizationStatusRestricted||[ALAssetsLibrary authorizationStatus]==ALAuthorizationStatusDenied)
 //    {
 //        
@@ -75,13 +105,6 @@
         //设置拍照后的图片可被编辑
         picker.allowsEditing = YES;
         picker.sourceType = sourceType;
-        
-        
-        
-//        if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-//            self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
-//        }
-        
         [self presentViewController:picker animated:YES completion:nil];
     }else
     {
@@ -103,7 +126,6 @@
 
 //当选择一张图片后进入这里
 -(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-
 {
     NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
     
@@ -115,9 +137,11 @@
         CGRect rect = [[info objectForKey:UIImagePickerControllerCropRect] CGRectValue];
         [picker dismissViewControllerAnimated:YES completion:nil];
         
-        image = [self imageChangeWithSize:rect WithImage:image];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_UI_IMAGE_PICKER_DONE object:image];
+        image = [self lyCropImage:image inRect:rect];
+
+        if ([image isKindOfClass:[UIImage class]]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_UI_IMAGE_PICKER_DONE object:image];
+        }
     }
 }
 
@@ -127,15 +151,42 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (UIImage *)imageChangeWithSize:(CGRect)rect WithImage:(UIImage *)image
+
+/**
+ *  裁剪图片，注意图像朝向会影响
+ *
+ *  @param image 图像
+ *  @param rect  相框
+ *
+ *  @return 裁剪后图像
+ */
+- (UIImage *)lyCropImage:(UIImage*)image inRect:(CGRect)rect
 {
-    UIImage *sourceImage = image;
-    UIImage *newImage = nil;
-    CGImageRef newCGImage = CGImageCreateWithImageInRect([sourceImage CGImage], rect);
-    newImage = [UIImage imageWithCGImage:newCGImage];
-    if(newImage == nil) {
-        NSLog(@"could not scale image");
-    }
-    return newImage;
+    double (^rad)(double) = ^(double deg) {
+        return deg / 180.0 * M_PI;
+    };
+    
+    CGAffineTransform rectTransform;
+    switch (image.imageOrientation) {
+        case UIImageOrientationLeft:
+            rectTransform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(rad(90)), 0, -image.size.height);
+            break;
+        case UIImageOrientationRight:
+            rectTransform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(rad(-90)), -image.size.width, 0);
+            break;
+        case UIImageOrientationDown:
+            rectTransform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(rad(-180)), -image.size.width, -image.size.height);
+            break;
+        default:
+            rectTransform = CGAffineTransformIdentity;
+    };
+    rectTransform = CGAffineTransformScale(rectTransform, image.scale, image.scale);
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectApplyAffineTransform(rect, rectTransform));
+    UIImage *result = [UIImage imageWithCGImage:imageRef scale:image.scale orientation:image.imageOrientation];
+    CGImageRelease(imageRef);
+    
+    return result;
 }
+
 @end

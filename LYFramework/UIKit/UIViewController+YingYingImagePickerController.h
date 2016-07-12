@@ -11,7 +11,7 @@
 
 #define NOTIFY_UI_IMAGE_PICKER_DONE     @"NOTIFY_UI_IMAGE_PICKER_DONE"
 
-@interface UIViewController (YingYingImagePickerController) <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface UIViewController (YingYingImagePickerController) <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIActionSheetDelegate>
 //@property (nonatomic , strong) UIImage* myPickImage;
 
 - (void)lyModalChoosePicker;
