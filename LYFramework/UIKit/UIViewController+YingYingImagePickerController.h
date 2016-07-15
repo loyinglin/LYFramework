@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "LYRACDefine.h"
 
+
 #define NOTIFY_UI_IMAGE_PICKER_DONE     @"NOTIFY_UI_IMAGE_PICKER_DONE"
 
+
+/**
+ *  选择照片，选择后马上回调。注意此时原viewController还没显示。
+ */
 @interface UIViewController (YingYingImagePickerController) <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIActionSheetDelegate>
 //@property (nonatomic , strong) UIImage* myPickImage;
 
