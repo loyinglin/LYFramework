@@ -12,6 +12,7 @@
 #import "RuntimeUtil.h"
 #import "TimeUtil.h"
 #import "LYRACDefine.h"
+#import "TextUtil.h"
 #import "UIImage+LYUtil.h"
 #import "UIViewController+YingYingImagePickerController.h"
 #import "UIView+LYSnapshot.h"
@@ -48,8 +49,8 @@
     [self.view addSubview:button];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    label.text = @"abc";
-    label.textColor = [UIColor redColor];
+    label.attributedText = [[TextUtil shareInstance] lyGetShadowWithString:@"bbb"];
+    label.textColor = [UIColor whiteColor];
 //    [self.view addSubview:label];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         UIImage *image = [label lySnapshotOnIOS7AndLater];

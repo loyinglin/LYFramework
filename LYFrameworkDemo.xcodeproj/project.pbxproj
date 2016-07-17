@@ -34,6 +34,7 @@
 		FDA87D4F1D2D03D200382EAB /* LYDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D4E1D2D03D200382EAB /* LYDefine.m */; };
 		FDC245F41D378C03006B470D /* UIView+LYSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */; };
 		FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC638061D349350002F40BE /* UIImage+LYUtil.m */; };
+		FDF979FB1D3A0AC500F09D05 /* TextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF979FA1D3A0AC500F09D05 /* TextUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYSnapshot.m"; sourceTree = "<group>"; };
 		FDC638051D349350002F40BE /* UIImage+LYUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYUtil.h"; sourceTree = "<group>"; };
 		FDC638061D349350002F40BE /* UIImage+LYUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYUtil.m"; sourceTree = "<group>"; };
+		FDF979F91D3A0AC500F09D05 /* TextUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextUtil.h; sourceTree = "<group>"; };
+		FDF979FA1D3A0AC500F09D05 /* TextUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,8 @@
 				FDA87D401D2CCDBA00382EAB /* TimeUtil.m */,
 				FDA87D441D2CE9D900382EAB /* RuntimeUtil.h */,
 				FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */,
+				FDF979F91D3A0AC500F09D05 /* TextUtil.h */,
+				FDF979FA1D3A0AC500F09D05 /* TextUtil.m */,
 				FDA87D4B1D2CF7D400382EAB /* LYRACMetamacros.h */,
 				FDA87D4C1D2CF84800382EAB /* LYRACDefine.h */,
 				FDA87D4D1D2CFED300382EAB /* LYDefine.h */,
@@ -360,6 +365,7 @@
 				FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */,
 				FD65AC491D20D20800C5C1A4 /* LYColor.m in Sources */,
 				FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */,
+				FDF979FB1D3A0AC500F09D05 /* TextUtil.m in Sources */,
 				FD64158B1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m in Sources */,
 				FD65AC451D20D20800C5C1A4 /* LYCoding.m in Sources */,
 			);
@@ -492,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LYFrameworkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.LYFrameworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LYFrameworkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.LYFrameworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

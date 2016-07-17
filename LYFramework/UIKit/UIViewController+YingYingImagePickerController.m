@@ -35,13 +35,13 @@
         
         UIAlertAction* takePhoto = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             @strongify(self);
-            [self takePhoto];
+            [self lyTakePhoto];
         }];
         [controller addAction:takePhoto];
         
         UIAlertAction* localPhoto = [UIAlertAction actionWithTitle:@"从相册中选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             @strongify(self);
-            [self LocalPhoto];
+            [self lyTakePhoto];
         }];
         [controller addAction:localPhoto];
         [self presentViewController:controller animated:YES completion:nil];
