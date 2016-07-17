@@ -66,11 +66,11 @@
     switch (buttonIndex) {
         case 0:
             //从相册选择
-            [self LocalPhoto];
+            [self lyLocalPhoto];
             break;
         case 1:
             //拍照
-            [self takePhoto];
+            [self lyTakePhoto];
             break;
          
         default:
@@ -79,7 +79,7 @@
 }
 #pragma mark - ui
 
--(void)takePhoto
+-(void)lyTakePhoto
 {
 //    if([ALAssetsLibrary authorizationStatus]==ALAuthorizationStatusRestricted||[ALAssetsLibrary authorizationStatus]==ALAuthorizationStatusDenied)
 //    {
@@ -112,7 +112,7 @@
     }
 }
 
--(void)LocalPhoto
+-(void)lyLocalPhoto
 {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     //    picker.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
