@@ -10,8 +10,7 @@
 
 @implementation UIView (LYSnapshot)
 
-- (UIImage*)lySnapshotOnIOS7AndLater
-{
+- (UIImage*)lySnapshot {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
     // Render our snapshot into the image context
 //    BOOL flag = [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:NO];
@@ -24,6 +23,7 @@
     UIImage *complexViewImage = UIGraphicsGetImageFromCurrentImageContext();
     // Finish using the context
     UIGraphicsEndImageContext();
+    
     
     return complexViewImage;
 }

@@ -10,6 +10,6 @@
 
 @interface UIView (LYSnapshot)
 
-- (UIImage*)lySnapshotOnIOS7AndLater;
+- (UIImage*)lySnapshot;
 
 @end

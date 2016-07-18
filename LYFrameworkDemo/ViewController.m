@@ -53,7 +53,7 @@
     label.textColor = [UIColor whiteColor];
 //    [self.view addSubview:label];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        UIImage *image = [label lySnapshotOnIOS7AndLater];
+        UIImage *image = [label lySnapshot];
         imageView.image = image;
     });
     
