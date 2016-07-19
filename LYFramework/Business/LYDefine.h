@@ -14,6 +14,27 @@
 #import <UIKit/UIKit.h>
 
 
+// 不支持横屏
+#ifndef LY_SCREEN_WIDTH
+#define LY_SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
+#endif
+
+
+#ifndef LY_SCREENH_HEIGHT
+#define LY_SCREENH_HEIGHT   [UIScreen mainScreen].bounds.size.height
+#endif
+
+
+#ifndef LY_IS_IPHONE
+#define LY_IS_IPHONE   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#endif
+
+#ifndef LY_IS_IPAD
+#define LY_IS_IPAD   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#endif
+
+
+
 BOOL LYIOSVersionIsAbove9(void) {
     return NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_8_4;
 }
@@ -85,6 +106,12 @@ FOUNDATION_EXTERN UIColor *LYRandomColor(void);
 FOUNDATION_EXTERN NSString *LYUUID(void);
 
 
+//获取 Temp
+#define lyPathTemp NSTemporaryDirectory()
+//获取沙盒 Document
+#define lyPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//获取沙盒 Cache
+#define lyPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
 
 
