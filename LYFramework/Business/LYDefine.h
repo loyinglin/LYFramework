@@ -13,6 +13,8 @@
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
 
+#define DEFINE_IS_LIVE ([[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.loyinglin.live"])
+
 
 // 不支持横屏
 #ifndef LY_SCREEN_WIDTH
