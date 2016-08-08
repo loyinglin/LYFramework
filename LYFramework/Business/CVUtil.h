@@ -19,15 +19,17 @@
 
 #pragma mark - update
 
+- (void)lyCompressVideo:(NSString *)path;
 
+- (void)lyConvertBGRAtoRGBA:(unsigned char *)data withSize:(size_t)sizeOfData;
 
 #pragma mark - get
 
-- (UIImage *)getImageFromPixelBuffer:(CVPixelBufferRef)pixelBufferRef;
+- (UIImage *)lyGetImageFromPixelBuffer:(CVPixelBufferRef)pixelBufferRef;
 
-- (CVPixelBufferRef)getPixelBufferFromCGImage:(CGImageRef)image;
+- (CVPixelBufferRef)lyGetPixelBufferFromCGImage:(CGImageRef)image;
 
-
+- (CVPixelBufferRef)lyGetPixelBufferFaster:(CGImageRef)image;
 #pragma mark - message
 
 @end
