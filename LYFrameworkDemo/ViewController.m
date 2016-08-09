@@ -16,6 +16,7 @@
 #import "UIImage+LYUtil.h"
 #import "UIViewController+YingYingImagePickerController.h"
 #import "UIView+LYSnapshot.h"
+#import "AroundModalAddressController.h"
 
 @interface ViewController ()
 
@@ -44,7 +45,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"加载" forState:UIControlStateNormal];
     [button setFrame:CGRectMake(100, 100, 100, 100)];
-    [button addTarget:self action:@selector(lyModalChoosePicker) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(snapshot) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
     
@@ -62,7 +63,10 @@
 }
 
 - (void)snapshot {
+
+    AroundModalAddressController *controller = [[AroundModalAddressController alloc] initWithOverCurrentContext];
     
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
