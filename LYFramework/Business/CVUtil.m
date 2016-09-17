@@ -248,4 +248,57 @@
 
 #pragma mark - message
 
+
+
+#pragma mark ---- <加载视频录制>
+- (void)requestAccessForVideo{
+    __weak typeof(self) _self = self;
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    switch (status) {
+        case AVAuthorizationStatusNotDetermined:{
+            // 许可对话没有出现，发起授权许可
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                if (granted) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+
+                    });
+                }
+            }];
+            break;
+        }
+        case AVAuthorizationStatusAuthorized:{
+            // 已经开启授权，可继续
+            
+            break;
+        }
+        case AVAuthorizationStatusDenied:
+        case AVAuthorizationStatusRestricted:
+            // 用户明确地拒绝授权，或者相机设备无法访问
+            
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark ---- <加载音频录制>
+- (void)requestAccessForAudio{
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+    switch (status) {
+        case AVAuthorizationStatusNotDetermined:{
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+            }];
+            break;
+        }
+        case AVAuthorizationStatusAuthorized:{
+            break;
+        }
+        case AVAuthorizationStatusDenied:
+        case AVAuthorizationStatusRestricted:
+            break;
+        default:
+            break;
+    }
+}
+
 @end

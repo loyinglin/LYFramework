@@ -133,7 +133,7 @@
     if ([type isEqualToString:@"public.image"])
     {
         //先把图片转成NSData
-        UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
         CGRect rect = [[info objectForKey:UIImagePickerControllerCropRect] CGRectValue];
         [picker dismissViewControllerAnimated:YES completion:nil];
         
