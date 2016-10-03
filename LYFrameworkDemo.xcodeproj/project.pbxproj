@@ -32,6 +32,8 @@
 		FD75C82E1D4EEE3300E0F95E /* AroundModalAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD75C82A1D4EEE3300E0F95E /* AroundModalAddressController.m */; };
 		FD75C82F1D4EEE3300E0F95E /* AroundModalAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD75C82B1D4EEE3300E0F95E /* AroundModalAddressController.xib */; };
 		FD75C8301D4EEE3300E0F95E /* china.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD75C82C1D4EEE3300E0F95E /* china.txt */; };
+		FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */; };
+		FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */; };
 		FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D401D2CCDBA00382EAB /* TimeUtil.m */; };
 		FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */; };
 		FDA87D461D2CE9D900382EAB /* RuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */; };
@@ -97,6 +99,10 @@
 		FD75C82A1D4EEE3300E0F95E /* AroundModalAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundModalAddressController.m; sourceTree = "<group>"; };
 		FD75C82B1D4EEE3300E0F95E /* AroundModalAddressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundModalAddressController.xib; sourceTree = "<group>"; };
 		FD75C82C1D4EEE3300E0F95E /* china.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = china.txt; sourceTree = "<group>"; };
+		FD8BC4301D9B6FCA00BF9AB2 /* CaptureStreamUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureStreamUtil.h; sourceTree = "<group>"; };
+		FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureStreamUtil.m; sourceTree = "<group>"; };
+		FD8BC4321D9B6FCA00BF9AB2 /* CaptureUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureUtil.h; sourceTree = "<group>"; };
+		FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureUtil.m; sourceTree = "<group>"; };
 		FDA87D3F1D2CCDBA00382EAB /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
 		FDA87D401D2CCDBA00382EAB /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
 		FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtilTest.m; sourceTree = "<group>"; };
@@ -200,6 +206,10 @@
 		FD65AC2C1D20D20800C5C1A4 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				FD8BC4301D9B6FCA00BF9AB2 /* CaptureStreamUtil.h */,
+				FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */,
+				FD8BC4321D9B6FCA00BF9AB2 /* CaptureUtil.h */,
+				FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */,
 				FD75C8261D4EEE3300E0F95E /* area */,
 				FD65AC2D1D20D20800C5C1A4 /* ChatUtil.h */,
 				FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */,
@@ -382,9 +392,11 @@
 				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,
 				FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */,
 				FD65AC471D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m in Sources */,
+				FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */,
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
 				FD65AC481D20D20800C5C1A4 /* NSObject+LYTypeConversion.m in Sources */,
 				FD65AC461D20D20800C5C1A4 /* LYTypeEncoding.m in Sources */,
+				FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */,
 				FD65AC4B1D20D20800C5C1A4 /* NSObject+LYUITipsView.m in Sources */,
 				FD75C82E1D4EEE3300E0F95E /* AroundModalAddressController.m in Sources */,
 				FD5FCCD21CF322D40094752B /* AppDelegate.m in Sources */,
