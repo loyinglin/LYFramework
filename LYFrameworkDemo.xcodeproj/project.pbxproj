@@ -38,6 +38,7 @@
 		FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */; };
 		FDA87D461D2CE9D900382EAB /* RuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */; };
 		FDA87D4F1D2D03D200382EAB /* LYDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D4E1D2D03D200382EAB /* LYDefine.m */; };
+		FDB306B71DACC2D2006501D2 /* UIView+LYLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB306B61DACC2D2006501D2 /* UIView+LYLayout.m */; };
 		FDC245F41D378C03006B470D /* UIView+LYSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */; };
 		FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC638061D349350002F40BE /* UIImage+LYUtil.m */; };
 		FDF979FB1D3A0AC500F09D05 /* TextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF979FA1D3A0AC500F09D05 /* TextUtil.m */; };
@@ -112,6 +113,8 @@
 		FDA87D4C1D2CF84800382EAB /* LYRACDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRACDefine.h; sourceTree = "<group>"; };
 		FDA87D4D1D2CFED300382EAB /* LYDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDefine.h; sourceTree = "<group>"; };
 		FDA87D4E1D2D03D200382EAB /* LYDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDefine.m; sourceTree = "<group>"; };
+		FDB306B51DACC2D2006501D2 /* UIView+LYLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYLayout.h"; sourceTree = "<group>"; };
+		FDB306B61DACC2D2006501D2 /* UIView+LYLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYLayout.m"; sourceTree = "<group>"; };
 		FDC245F21D378C03006B470D /* UIView+LYSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYSnapshot.h"; sourceTree = "<group>"; };
 		FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYSnapshot.m"; sourceTree = "<group>"; };
 		FDC638051D349350002F40BE /* UIImage+LYUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYUtil.h"; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */,
 				FDC638051D349350002F40BE /* UIImage+LYUtil.h */,
 				FDC638061D349350002F40BE /* UIImage+LYUtil.m */,
+				FDB306B51DACC2D2006501D2 /* UIView+LYLayout.h */,
+				FDB306B61DACC2D2006501D2 /* UIView+LYLayout.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				TargetAttributes = {
 					FD5FCCC91CF322D40094752B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = A478ENRUX2;
 					};
 					FD5FCCE21CF322D50094752B = {
 						CreatedOnToolsVersion = 7.3;
@@ -390,6 +396,7 @@
 				FD75C82D1D4EEE3300E0F95E /* AroundAddressViewModel.m in Sources */,
 				FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */,
 				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,
+				FDB306B71DACC2D2006501D2 /* UIView+LYLayout.m in Sources */,
 				FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */,
 				FD65AC471D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m in Sources */,
 				FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */,
@@ -537,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A478ENRUX2;
 				INFOPLIST_FILE = LYFrameworkDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -549,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A478ENRUX2;
 				INFOPLIST_FILE = LYFrameworkDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
