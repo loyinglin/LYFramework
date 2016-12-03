@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LYFrameworkDemo/AppDelegate.m"
-            timestampString = "498041141.62983"
+            filePath = "LYFramework/Business/FileUtil.m"
+            timestampString = "500289507.954804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-docPath"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

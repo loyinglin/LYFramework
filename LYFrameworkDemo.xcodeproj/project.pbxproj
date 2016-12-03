@@ -41,6 +41,7 @@
 		FDB306B71DACC2D2006501D2 /* UIView+LYLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB306B61DACC2D2006501D2 /* UIView+LYLayout.m */; };
 		FDC245F41D378C03006B470D /* UIView+LYSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */; };
 		FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC638061D349350002F40BE /* UIImage+LYUtil.m */; };
+		FDE1CB6E1DD1B7260080D01D /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE1CB6D1DD1B7260080D01D /* FileUtil.m */; };
 		FDF979FB1D3A0AC500F09D05 /* TextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF979FA1D3A0AC500F09D05 /* TextUtil.m */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,8 @@
 		FDC245F31D378C03006B470D /* UIView+LYSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYSnapshot.m"; sourceTree = "<group>"; };
 		FDC638051D349350002F40BE /* UIImage+LYUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYUtil.h"; sourceTree = "<group>"; };
 		FDC638061D349350002F40BE /* UIImage+LYUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYUtil.m"; sourceTree = "<group>"; };
+		FDE1CB6C1DD1B7260080D01D /* FileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
+		FDE1CB6D1DD1B7260080D01D /* FileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtil.m; sourceTree = "<group>"; };
 		FDF979F91D3A0AC500F09D05 /* TextUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextUtil.h; sourceTree = "<group>"; };
 		FDF979FA1D3A0AC500F09D05 /* TextUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +233,8 @@
 				FDA87D4C1D2CF84800382EAB /* LYRACDefine.h */,
 				FDA87D4D1D2CFED300382EAB /* LYDefine.h */,
 				FDA87D4E1D2D03D200382EAB /* LYDefine.m */,
+				FDE1CB6C1DD1B7260080D01D /* FileUtil.h */,
+				FDE1CB6D1DD1B7260080D01D /* FileUtil.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				FDC245F41D378C03006B470D /* UIView+LYSnapshot.m in Sources */,
 				FD75C82D1D4EEE3300E0F95E /* AroundAddressViewModel.m in Sources */,
 				FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */,
+				FDE1CB6E1DD1B7260080D01D /* FileUtil.m in Sources */,
 				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,
 				FDB306B71DACC2D2006501D2 /* UIView+LYLayout.m in Sources */,
 				FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */,

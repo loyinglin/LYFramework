@@ -13,6 +13,7 @@
 #import "TimeUtil.h"
 #import "LYRACDefine.h"
 #import "TextUtil.h"
+#import "FileUtil.h"
 #import "UIImage+LYUtil.h"
 #import "UIViewController+YingYingImagePickerController.h"
 #import "UIView+LYSnapshot.h"
@@ -30,44 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *path = [[FileUtil shareInstance] appPath];
+    NSLog(@"PATH %@", path);
     
-    UIImageView* imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [self.view insertSubview:imageView atIndex:0];
-    
-    @weakify(self);
-    [[NSNotificationCenter defaultCenter] addObserverForName:NOTIFY_UI_IMAGE_PICKER_DONE object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        @strongify(self);
-        if ([note.object isKindOfClass:[UIImage class]]) {
-            imageView.image = note.object;
-        }
-    }];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setTitle:@"加载" forState:UIControlStateNormal];
-    [button setFrame:CGRectMake(100, 100, 100, 100)];
-    [button addTarget:self action:@selector(snapshot) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:button];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    label.attributedText = [[TextUtil shareInstance] lyGetShadowWithString:@"bbb"];
-    label.textColor = [UIColor whiteColor];
-//    [self.view addSubview:label];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        UIImage *image = [label lySnapshot];
-        imageView.image = image;
-    });
-    
-    
-    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
 }
 
-- (void)snapshot {
-
-    AroundModalAddressController *controller = [[AroundModalAddressController alloc] initWithOverCurrentContext];
-    
-    [self presentViewController:controller animated:NO completion:nil];
-}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
