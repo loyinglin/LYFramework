@@ -26,3 +26,6 @@ void LYDebug(const char *fileName, int lineNumber, NSString *fmt, ...);
  *  滚动到最下面，点击“存储到...”按钮将 Log 存储到桌面，双击打开就能看到 Log 信息了。
  */
 void redirectNSlogToDocumentFolder();
+
+NSArray* lyGetBacktrace();
+

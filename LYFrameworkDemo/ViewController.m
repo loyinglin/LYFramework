@@ -31,8 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *path = [[FileUtil shareInstance] appPath];
-    NSLog(@"PATH %@", path);
+//    NSString *path = [[FileUtil shareInstance] appPath];
+//    NSLog(@"PATH %@", path);
+    NSLog(@"%lx ", 0x100438bd0 - 0x100080000);
     
 }
 
