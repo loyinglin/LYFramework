@@ -34,6 +34,7 @@
 		FD75C8301D4EEE3300E0F95E /* china.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD75C82C1D4EEE3300E0F95E /* china.txt */; };
 		FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */; };
 		FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */; };
+		FD8E856F1E5D627F00D46C48 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8E856E1E5D627F00D46C48 /* UncaughtExceptionHandler.m */; };
 		FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D401D2CCDBA00382EAB /* TimeUtil.m */; };
 		FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */; };
 		FDA87D461D2CE9D900382EAB /* RuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */; };
@@ -105,6 +106,8 @@
 		FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureStreamUtil.m; sourceTree = "<group>"; };
 		FD8BC4321D9B6FCA00BF9AB2 /* CaptureUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureUtil.h; sourceTree = "<group>"; };
 		FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureUtil.m; sourceTree = "<group>"; };
+		FD8E856D1E5D627F00D46C48 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		FD8E856E1E5D627F00D46C48 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		FDA87D3F1D2CCDBA00382EAB /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
 		FDA87D401D2CCDBA00382EAB /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
 		FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtilTest.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 		FD65AC311D20D20800C5C1A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FD8E856D1E5D627F00D46C48 /* UncaughtExceptionHandler.h */,
+				FD8E856E1E5D627F00D46C48 /* UncaughtExceptionHandler.m */,
 				FD65AC321D20D20800C5C1A4 /* LYCoding.h */,
 				FD65AC331D20D20800C5C1A4 /* LYCoding.m */,
 				FD65AC341D20D20800C5C1A4 /* LYTypeEncoding.h */,
@@ -399,6 +404,7 @@
 				FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */,
 				FDC245F41D378C03006B470D /* UIView+LYSnapshot.m in Sources */,
 				FD75C82D1D4EEE3300E0F95E /* AroundAddressViewModel.m in Sources */,
+				FD8E856F1E5D627F00D46C48 /* UncaughtExceptionHandler.m in Sources */,
 				FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */,
 				FDE1CB6E1DD1B7260080D01D /* FileUtil.m in Sources */,
 				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,

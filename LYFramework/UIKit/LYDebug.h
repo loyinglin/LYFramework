@@ -27,5 +27,9 @@ void LYDebug(const char *fileName, int lineNumber, NSString *fmt, ...);
  */
 void redirectNSlogToDocumentFolder();
 
+
+
 NSArray* lyGetBacktrace();
+
+
 
