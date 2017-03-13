@@ -37,12 +37,12 @@ NSString* getAppInfo();
     }
     
     NSSetUncaughtExceptionHandler(install ? HandleException : NULL);
-    signal(SIGABRT, install ? SignalHandler : SIG_DFL);
-    signal(SIGILL, install ? SignalHandler : SIG_DFL);
-    signal(SIGSEGV, install ? SignalHandler : SIG_DFL);
-    signal(SIGFPE, install ? SignalHandler : SIG_DFL);
-    signal(SIGBUS, install ? SignalHandler : SIG_DFL);
-    signal(SIGPIPE, install ? SignalHandler : SIG_DFL);
+    signal(SIGABRT, install ? SignalHandler : SIG_DFL); // 
+    signal(SIGILL, install ? SignalHandler : SIG_DFL);  // kill信号
+    signal(SIGSEGV, install ? SignalHandler : SIG_DFL); // 段错误
+    signal(SIGFPE, install ? SignalHandler : SIG_DFL);  //
+    signal(SIGBUS, install ? SignalHandler : SIG_DFL);  // 总线错误
+    signal(SIGPIPE, install ? SignalHandler : SIG_DFL); // 坏的管道
 }
 
 - (void)alertView:(BOOL)show {

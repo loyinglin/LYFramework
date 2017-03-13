@@ -33,7 +33,10 @@
     
 //    NSString *path = [[FileUtil shareInstance] appPath];
 //    NSLog(@"PATH %@", path);
-    NSLog(@"%lx ", 0x100438bd0 - 0x100080000);
+    UIImage *image = [UIImage imageNamed:@"abc"];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:[image lyClipCGContext:image cornerRadius:image.size.height]];
+    imgView.center = self.view.center;
+    [self.view addSubview:imgView];
     
 }
 
