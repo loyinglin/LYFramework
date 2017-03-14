@@ -112,4 +112,58 @@
 }
 
 
+
+// CGContext 裁剪
+- (UIImage *)lyClipCGContext:(UIImage *)img cornerRadius:(CGFloat)radius {
+    UIImage *ret;
+    if (img) {
+        int w = img.size.width * img.scale;
+        int h = img.size.height * img.scale;
+        int c = radius;
+
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(w, h), false, 1.0);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextMoveToPoint(context, 0, c);
+        CGContextAddArcToPoint(context, 0, 0, c, 0, c);
+        CGContextAddLineToPoint(context, w-c, 0);
+        CGContextAddArcToPoint(context, w, 0, w, c, c);
+        CGContextAddLineToPoint(context, w, h-c);
+        CGContextAddArcToPoint(context, w, h, w-c, h, c);
+        CGContextAddLineToPoint(context, c, h);
+        CGContextAddArcToPoint(context, 0, h, 0, h-c, c);
+        CGContextAddLineToPoint(context, 0, c);
+        CGContextClosePath(context);
+        
+        CGContextClip(context);     // 先裁剪 context，再画图，就会在裁剪后的 path 中画
+        [img drawInRect:CGRectMake(0, 0, w, h)];       // 画图
+        CGContextDrawPath(context, kCGPathFill);
+        
+        ret = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+
+    }
+    return ret;
+}
+
+// UIBezierPath 裁剪
+- (UIImage *)lyClipUIBezierPath:(UIImage *)img cornerRadius:(CGFloat)radius {
+    UIImage *ret;
+    if (img) {
+        int w = img.size.width * img.scale;
+        int h = img.size.height * img.scale;
+        int c = radius;
+        CGRect rect = CGRectMake(0, 0, w, h);
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(w, h), false, 1.0);
+        [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:c] addClip];
+        [img drawInRect:rect];
+        ret = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+
+    }
+    
+    return ret;
+}
+
+
 @end

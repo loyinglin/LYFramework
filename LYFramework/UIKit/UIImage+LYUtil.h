@@ -51,4 +51,24 @@
 - (UIImage *)lyVerticalFlip;
 - (UIImage *)lyHorizontalFlip;
 
+
+/**
+ 圆形裁剪
+
+ @param img 图像
+ @param radius 半径
+ @return 裁剪后的图像
+ */
+- (UIImage *)lyClipUIBezierPath:(UIImage *)img cornerRadius:(CGFloat)radius;
+
+
+/**
+ 特殊形状裁剪
+
+ @param img 图像
+ @param radius 四个角的半径
+ @return 裁剪后的图像
+ */
+- (UIImage *)lyClipCGContext:(UIImage *)img cornerRadius:(CGFloat)radius;
+
 @end
