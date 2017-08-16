@@ -166,4 +166,64 @@
 }
 
 
+
+- (UIImage *)lyRenderBlackToRedColor
+{
+    // 分配内存
+    const int imageWidth = self.size.width;
+    const int imageHeight = self.size.height;
+    size_t      bytesPerRow = imageWidth * 4;
+    uint32_t* rgbImageBuf = (uint32_t*)malloc(bytesPerRow * imageHeight);
+    
+    // 创建context
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(rgbImageBuf, imageWidth, imageHeight, 8, bytesPerRow, colorSpace,
+                                                 kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast);
+    CGContextDrawImage(context, CGRectMake(0, 0, imageWidth, imageHeight), self.CGImage);
+    
+    // 遍历像素
+    int pixelNum = imageWidth * imageHeight;
+    uint32_t* pCurPtr = rgbImageBuf;
+    for (int i = 0; i < pixelNum; i++, pCurPtr++)
+    {
+        // RGBA的模式，内存中的布局是0xAABBGGRR
+        // ARGB的模式，内存中的布局是0xBBGGRRAA
+        if ((*pCurPtr & 0x00FFFFFF) == 0x00000000 && (*pCurPtr & 0xFF000000) == 0xFF000000)    // 将黑色变成红色
+        {
+            //            *pCurPtr = 0xFFF04F43;
+            uint8_t* ptr = (uint8_t*)pCurPtr;
+            ptr[3] = 0xff;
+            ptr[2] = 0x43;
+            ptr[1] = 0x4f;
+            ptr[0] = 0xf0;
+        }
+        
+        
+    }
+    
+    // 将内存转成image
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, lyProviderReleaseData);
+    CGImageRef imageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace,
+                                        kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast, dataProvider,
+                                        NULL, true, kCGRenderingIntentDefault);
+    CGDataProviderRelease(dataProvider);
+    
+    UIImage* resultUIImage = [UIImage imageWithCGImage:imageRef];
+    
+    // 释放
+    CGImageRelease(imageRef);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    // free(rgbImageBuf) 创建dataProvider时已提供释放函数，这里不用free
+    
+    return resultUIImage;
+}
+
+
+/** 颜色变化 */
+void lyProviderReleaseData (void *info, const void *data, size_t size)
+{
+    free((void*)data);
+}
+
 @end

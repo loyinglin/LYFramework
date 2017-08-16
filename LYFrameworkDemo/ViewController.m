@@ -23,21 +23,31 @@
 
 @end
 
-@implementation ViewController
+typedef void(^TestBlock)();
 
-+ (void)load {
+@implementation ViewController {
+    int a;
+    NSString *b;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    a = 0;
+    b = @"0";
+    __block int c = 0;
+    NSLog(@"%p %p %p", &a, &b, &c);
+    TestBlock block = ^() {
+        a = 100;
+        b = @"100";
+        c = 100;
+        
+        NSLog(@"%p %p %p", &a, &b, &c);
+    };
+    block();
+    NSLog(@"%d %@ %d", a, b, c);
     
-//    NSString *path = [[FileUtil shareInstance] appPath];
-//    NSLog(@"PATH %@", path);
-    UIImage *image = [UIImage imageNamed:@"abc"];
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:[image lyClipCGContext:image cornerRadius:image.size.height]];
-    imgView.center = self.view.center;
-    [self.view addSubview:imgView];
-    
+    UIImage *image = [UIImage imageNamed:@"abc.png"];
+    [self.view addSubview:[[UIImageView alloc] initWithImage:[image lyRenderBlackToRedColor]]];
 }
 
 

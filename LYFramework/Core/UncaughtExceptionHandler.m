@@ -37,7 +37,7 @@ NSString* getAppInfo();
     }
     
     NSSetUncaughtExceptionHandler(install ? HandleException : NULL);
-    signal(SIGABRT, install ? SignalHandler : SIG_DFL); // 
+    signal(SIGABRT, install ? SignalHandler : SIG_DFL); //
     signal(SIGILL, install ? SignalHandler : SIG_DFL);  // kill信号
     signal(SIGSEGV, install ? SignalHandler : SIG_DFL); // 段错误
     signal(SIGFPE, install ? SignalHandler : SIG_DFL);  //

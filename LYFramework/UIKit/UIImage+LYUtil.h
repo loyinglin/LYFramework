@@ -71,4 +71,6 @@
  */
 - (UIImage *)lyClipCGContext:(UIImage *)img cornerRadius:(CGFloat)radius;
 
+
+- (UIImage *)lyRenderBlackToRedColor;
 @end
