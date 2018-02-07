@@ -32,6 +32,9 @@
 		FD75C82E1D4EEE3300E0F95E /* AroundModalAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD75C82A1D4EEE3300E0F95E /* AroundModalAddressController.m */; };
 		FD75C82F1D4EEE3300E0F95E /* AroundModalAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD75C82B1D4EEE3300E0F95E /* AroundModalAddressController.xib */; };
 		FD75C8301D4EEE3300E0F95E /* china.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD75C82C1D4EEE3300E0F95E /* china.txt */; };
+		FD78B23D202AD82E00D1A5D4 /* LYCircleBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD78B23C202AD82E00D1A5D4 /* LYCircleBuffer.m */; };
+		FD78B23F202AD86400D1A5D4 /* LYCircleBufferTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD78B23E202AD86400D1A5D4 /* LYCircleBufferTest.mm */; };
+		FD78B242202AD8FD00D1A5D4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */; };
 		FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */; };
 		FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */; };
 		FD8E856F1E5D627F00D46C48 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8E856E1E5D627F00D46C48 /* UncaughtExceptionHandler.m */; };
@@ -103,6 +106,10 @@
 		FD75C82A1D4EEE3300E0F95E /* AroundModalAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundModalAddressController.m; sourceTree = "<group>"; };
 		FD75C82B1D4EEE3300E0F95E /* AroundModalAddressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundModalAddressController.xib; sourceTree = "<group>"; };
 		FD75C82C1D4EEE3300E0F95E /* china.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = china.txt; sourceTree = "<group>"; };
+		FD78B23B202AD82E00D1A5D4 /* LYCircleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCircleBuffer.h; sourceTree = "<group>"; };
+		FD78B23C202AD82E00D1A5D4 /* LYCircleBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCircleBuffer.m; sourceTree = "<group>"; };
+		FD78B23E202AD86400D1A5D4 /* LYCircleBufferTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LYCircleBufferTest.mm; sourceTree = "<group>"; };
+		FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		FD8BC4301D9B6FCA00BF9AB2 /* CaptureStreamUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureStreamUtil.h; sourceTree = "<group>"; };
 		FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureStreamUtil.m; sourceTree = "<group>"; };
 		FD8BC4321D9B6FCA00BF9AB2 /* CaptureUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureUtil.h; sourceTree = "<group>"; };
@@ -137,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD78B242202AD8FD00D1A5D4 /* libstdc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +164,7 @@
 				FD5FCCCC1CF322D40094752B /* LYFrameworkDemo */,
 				FD5FCCE61CF322D50094752B /* LYFrameworkDemoTests */,
 				FD5FCCCB1CF322D40094752B /* Products */,
+				FD78B240202AD8E800D1A5D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */,
+				FD78B23E202AD86400D1A5D4 /* LYCircleBufferTest.mm */,
 				FD5FCCE91CF322D50094752B /* Info.plist */,
 				FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */,
 				FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */,
@@ -208,6 +218,7 @@
 		FD65AC2B1D20D20800C5C1A4 /* LYFramework */ = {
 			isa = PBXGroup;
 			children = (
+				FD78B23A202AD82E00D1A5D4 /* Network */,
 				FD65AC2C1D20D20800C5C1A4 /* Business */,
 				FD65AC311D20D20800C5C1A4 /* Core */,
 				FD65AC3A1D20D20800C5C1A4 /* UIKit */,
@@ -298,6 +309,23 @@
 				FD75C82C1D4EEE3300E0F95E /* china.txt */,
 			);
 			path = area;
+			sourceTree = "<group>";
+		};
+		FD78B23A202AD82E00D1A5D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FD78B23B202AD82E00D1A5D4 /* LYCircleBuffer.h */,
+				FD78B23C202AD82E00D1A5D4 /* LYCircleBuffer.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FD78B240202AD8E800D1A5D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +437,7 @@
 				FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */,
 				FDC245F41D378C03006B470D /* UIView+LYSnapshot.m in Sources */,
 				FD75C82D1D4EEE3300E0F95E /* AroundAddressViewModel.m in Sources */,
+				FD78B23D202AD82E00D1A5D4 /* LYCircleBuffer.m in Sources */,
 				FD8E856F1E5D627F00D46C48 /* UncaughtExceptionHandler.m in Sources */,
 				FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */,
 				FDE1CB6E1DD1B7260080D01D /* FileUtil.m in Sources */,
@@ -440,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD78B23F202AD86400D1A5D4 /* LYCircleBufferTest.mm in Sources */,
 				FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */,
 				FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */,
 				FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */,
