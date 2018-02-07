@@ -42,9 +42,14 @@ char testStr[bufferSize];
  
  */
 - (void)testBuffer {
+    printf("testStr: ");
     for (int i = 0; i < bufferSize; ++i) {
         testStr[i] = 'a' + arc4random_uniform(10);
+        putchar(testStr[i]);
     }
+    printf("    with buffer size:%d\n", bufferSize);
+    
+    
     deque<char> queue;
     LYCircleBuffer *circleBuffer = [[LYCircleBuffer alloc] initWithBufferSize:bufferSize];
     
@@ -52,12 +57,12 @@ char testStr[bufferSize];
         int type = arc4random_uniform(2);
         if (type == 0) { // read
             puts("--------------read----------------");
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getLeftSize]];
+            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
             printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getLeftSize]; ++j) {
+            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
                 putchar(s[j]);
             }
-            printf("    with size: %d\n", [circleBuffer getLeftSize]);
+            printf("    with size: %d\n", [circleBuffer getReadySize]);
             int readSize = arc4random_uniform(bufferSize / 2) + 1;
             char dequeStr[bufferSize];
             int dequeSize = [self readStrFromDeque:queue buffer:dequeStr size:readSize];
@@ -73,22 +78,22 @@ char testStr[bufferSize];
             }
             puts("");
             
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getLeftSize]];
+            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
             printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getLeftSize]; ++j) {
+            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
                 putchar(s[j]);
             }
-            printf("    with size: %d\n", [circleBuffer getLeftSize]);
+            printf("    with size: %d\n", [circleBuffer getReadySize]);
             
         }
         else {
             puts("--------------write----------------");
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getLeftSize]];
+            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
             printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getLeftSize]; ++j) {
+            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
                 putchar(s[j]);
             }
-            printf("    with size: %d\n", [circleBuffer getLeftSize]);
+            printf("    with size: %d\n", [circleBuffer getReadySize]);
             int writeSize = arc4random_uniform(bufferSize / 2) + 1;
             int dequeSize = [self writeStrFromDeque:queue buffer:testStr size:writeSize];
             int circleSize = [circleBuffer writeWithBuffer:testStr size:writeSize];
@@ -100,12 +105,12 @@ char testStr[bufferSize];
             puts("");
             XCTAssert(circleSize == dequeSize);
             
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getLeftSize]];
+            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
             printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getLeftSize]; ++j) {
+            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
                 putchar(s[j]);
             }
-            printf("    with size: %d\n", [circleBuffer getLeftSize]);
+            printf("    with size: %d\n", [circleBuffer getReadySize]);
         }
     }
     
