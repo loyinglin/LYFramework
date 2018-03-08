@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD07F0A62050DFEA002A4B73 /* KSCircleBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD07F0A52050DFEA002A4B73 /* KSCircleBuffer.mm */; };
+		FD07F0A92050E0A0002A4B73 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */; };
 		FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */; };
 		FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426DF1D2B834C003BC203 /* CVUtil.m */; };
 		FD3426E21D2B8477003BC203 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3426E11D2B8477003BC203 /* abc.png */; };
@@ -16,7 +18,6 @@
 		FD5FCCD81CF322D40094752B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCD61CF322D40094752B /* Main.storyboard */; };
 		FD5FCCDA1CF322D40094752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCD91CF322D40094752B /* Assets.xcassets */; };
 		FD5FCCDD1CF322D40094752B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5FCCDB1CF322D40094752B /* LaunchScreen.storyboard */; };
-		FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */; };
 		FD64158B1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD64158A1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m */; };
 		FD65AC431D20D20800C5C1A4 /* ChatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC2E1D20D20800C5C1A4 /* ChatUtil.m */; };
 		FD65AC441D20D20800C5C1A4 /* IPAddressUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65AC301D20D20800C5C1A4 /* IPAddressUtil.m */; };
@@ -34,12 +35,10 @@
 		FD75C8301D4EEE3300E0F95E /* china.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD75C82C1D4EEE3300E0F95E /* china.txt */; };
 		FD78B23D202AD82E00D1A5D4 /* LYCircleBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD78B23C202AD82E00D1A5D4 /* LYCircleBuffer.m */; };
 		FD78B23F202AD86400D1A5D4 /* LYCircleBufferTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD78B23E202AD86400D1A5D4 /* LYCircleBufferTest.mm */; };
-		FD78B242202AD8FD00D1A5D4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */; };
 		FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4311D9B6FCA00BF9AB2 /* CaptureStreamUtil.m */; };
 		FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8BC4331D9B6FCA00BF9AB2 /* CaptureUtil.m */; };
 		FD8E856F1E5D627F00D46C48 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8E856E1E5D627F00D46C48 /* UncaughtExceptionHandler.m */; };
 		FDA87D411D2CCDBA00382EAB /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D401D2CCDBA00382EAB /* TimeUtil.m */; };
-		FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */; };
 		FDA87D461D2CE9D900382EAB /* RuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */; };
 		FDA87D4F1D2D03D200382EAB /* LYDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA87D4E1D2D03D200382EAB /* LYDefine.m */; };
 		FDB306B71DACC2D2006501D2 /* UIView+LYLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB306B61DACC2D2006501D2 /* UIView+LYLayout.m */; };
@@ -61,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD07F0A42050DFEA002A4B73 /* KSCircleBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSCircleBuffer.h; sourceTree = "<group>"; };
+		FD07F0A52050DFEA002A4B73 /* KSCircleBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCircleBuffer.mm; sourceTree = "<group>"; };
+		FD07F0A72050E053002A4B73 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUtilTest.m; sourceTree = "<group>"; };
 		FD3426DE1D2B834C003BC203 /* CVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUtil.h; sourceTree = "<group>"; };
 		FD3426DF1D2B834C003BC203 /* CVUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVUtil.m; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 		FD5FCCDC1CF322D40094752B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD5FCCDE1CF322D40094752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5FCCE31CF322D50094752B /* LYFrameworkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFrameworkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFrameworkDemoTests.m; sourceTree = "<group>"; };
 		FD5FCCE91CF322D50094752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6415891D2E45A10067D592 /* UIViewController+YingYingImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YingYingImagePickerController.h"; sourceTree = "<group>"; };
 		FD64158A1D2E45A10067D592 /* UIViewController+YingYingImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YingYingImagePickerController.m"; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		FD8E856E1E5D627F00D46C48 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		FDA87D3F1D2CCDBA00382EAB /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
 		FDA87D401D2CCDBA00382EAB /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
-		FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtilTest.m; sourceTree = "<group>"; };
 		FDA87D441D2CE9D900382EAB /* RuntimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeUtil.h; sourceTree = "<group>"; };
 		FDA87D451D2CE9D900382EAB /* RuntimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtil.m; sourceTree = "<group>"; };
 		FDA87D4B1D2CF7D400382EAB /* LYRACMetamacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRACMetamacros.h; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD78B242202AD8FD00D1A5D4 /* libstdc++.tbd in Frameworks */,
+				FD07F0A92050E0A0002A4B73 /* libstdc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,11 +206,9 @@
 		FD5FCCE61CF322D50094752B /* LYFrameworkDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				FD5FCCE71CF322D50094752B /* LYFrameworkDemoTests.m */,
 				FD78B23E202AD86400D1A5D4 /* LYCircleBufferTest.mm */,
 				FD5FCCE91CF322D50094752B /* Info.plist */,
 				FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */,
-				FDA87D421D2CD0AA00382EAB /* TimeUtilTest.m */,
 			);
 			path = LYFrameworkDemoTests;
 			sourceTree = "<group>";
@@ -316,6 +314,8 @@
 			children = (
 				FD78B23B202AD82E00D1A5D4 /* LYCircleBuffer.h */,
 				FD78B23C202AD82E00D1A5D4 /* LYCircleBuffer.m */,
+				FD07F0A42050DFEA002A4B73 /* KSCircleBuffer.h */,
+				FD07F0A52050DFEA002A4B73 /* KSCircleBuffer.mm */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -323,6 +323,7 @@
 		FD78B240202AD8E800D1A5D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD07F0A72050E053002A4B73 /* libstdc++.6.tbd */,
 				FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */,
 			);
 			name = Frameworks;
@@ -449,6 +450,7 @@
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
 				FD65AC481D20D20800C5C1A4 /* NSObject+LYTypeConversion.m in Sources */,
 				FD65AC461D20D20800C5C1A4 /* LYTypeEncoding.m in Sources */,
+				FD07F0A62050DFEA002A4B73 /* KSCircleBuffer.mm in Sources */,
 				FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */,
 				FD65AC4B1D20D20800C5C1A4 /* NSObject+LYUITipsView.m in Sources */,
 				FDDDE6BF1ECAECCB00174600 /* UIImage+gifUtil.m in Sources */,
@@ -470,9 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD78B23F202AD86400D1A5D4 /* LYCircleBufferTest.mm in Sources */,
-				FD5FCCE81CF322D50094752B /* LYFrameworkDemoTests.m in Sources */,
 				FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */,
-				FDA87D431D2CD0AA00382EAB /* TimeUtilTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

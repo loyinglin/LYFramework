@@ -8,9 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "LYCircleBuffer.h"
-#import <algorithm>
-#import <deque>
-using namespace std;
+#import "KSCircleBuffer.h"
 
 @interface LYCircleBufferTest : XCTestCase
 
@@ -33,114 +31,64 @@ using namespace std;
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-char s[1000];
-#define bufferSize (10)
-char testStr[bufferSize];
+#define bufferSize (4000)
+char ksReadStr[bufferSize];
+char lyReadStr[bufferSize];
+char writeStr[bufferSize];
 
 /**
  用双端队列来模拟环形缓冲区进行测试
  
  */
+#define defaultCircleBuffer (512 * 2 * 10) // 512帧大概12ms，保留大概120ms的延迟
+
 - (void)testBuffer {
     printf("testStr: ");
     for (int i = 0; i < bufferSize; ++i) {
-        testStr[i] = 'a' + arc4random_uniform(10);
-        putchar(testStr[i]);
+        writeStr[i] = 'a' + i % 26;
     }
     printf("    with buffer size:%d\n", bufferSize);
+
+    LYCircleBuffer *lyBuffer = [[LYCircleBuffer alloc] initWithBufferSize:defaultCircleBuffer];
+    KSCircleBuffer *ksBuffer = [[KSCircleBuffer alloc] initWithBufferSize:defaultCircleBuffer];
     
-    
-    deque<char> queue;
-    LYCircleBuffer *circleBuffer = [[LYCircleBuffer alloc] initWithBufferSize:bufferSize];
-    
+    /*
+     每次随机读写；
+     读写的长度为随机长度（10~2058），随机字符
+     保证每次读写的字符串一致
+     */
     for (int i = 0; i < 100; ++i) {
         int type = arc4random_uniform(2);
+        int length = arc4random_uniform(2048) + 10;
         if (type == 0) { // read
             puts("--------------read----------------");
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
-            printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
-                putchar(s[j]);
-            }
-            printf("    with size: %d\n", [circleBuffer getReadySize]);
-            int readSize = arc4random_uniform(bufferSize / 2) + 1;
-            char dequeStr[bufferSize];
-            int dequeSize = [self readStrFromDeque:queue buffer:dequeStr size:readSize];
+            int ksSize = [ksBuffer readWithBuffer:ksReadStr size:length];
+            int lySize = [lyBuffer readWithBuffer:lyReadStr size:length];
+            ksReadStr[ksSize] = 0;
+            lyReadStr[ksSize] = 0;
             
-            char circleStr[bufferSize];
-            int circleSize = [circleBuffer readWithBuffer:circleStr size:readSize];
-            XCTAssert(circleSize == dequeSize);
-            printf("readSize: %d\n", circleSize);
-            printf("readStr: ");
-            for (int j = 0; j < circleSize; ++j) {
-                XCTAssert(dequeStr[j] == circleStr[j]);
-                putchar(dequeStr[j]);
+            XCTAssert(ksSize == lySize);
+            for (int i = 0; i < ksSize; ++i) {
+                XCTAssert(ksReadStr[i] == lyReadStr[i]);
             }
-            puts("");
-            
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
-            printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
-                putchar(s[j]);
-            }
-            printf("    with size: %d\n", [circleBuffer getReadySize]);
-            
         }
         else {
             puts("--------------write----------------");
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
-            printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
-                putchar(s[j]);
-            }
-            printf("    with size: %d\n", [circleBuffer getReadySize]);
-            int writeSize = arc4random_uniform(bufferSize / 2) + 1;
-            int dequeSize = [self writeStrFromDeque:queue buffer:testStr size:writeSize];
-            int circleSize = [circleBuffer writeWithBuffer:testStr size:writeSize];
+            int pos = arc4random_uniform(100);
+            int ksSize = [ksBuffer writeWithBuffer:writeStr + pos size:length];
+            int lySize = [lyBuffer writeWithBuffer:writeStr + pos size:length];
             
-            printf("writeStr: ");
-            for (int j = 0; j < circleSize; ++j) {
-                putchar(testStr[j]);
-            }
-            puts("");
-            XCTAssert(circleSize == dequeSize);
-            
-            [circleBuffer justOutputWithBuffer:s size:[circleBuffer getReadySize]];
-            printf("totalStr: ");
-            for (int j = 0; j < [circleBuffer getReadySize]; ++j) {
-                putchar(s[j]);
-            }
-            printf("    with size: %d\n", [circleBuffer getReadySize]);
+            XCTAssert(ksSize == lySize);
         }
     }
-    
-    
 }
 
-- (uint32_t)readStrFromDeque:(deque<char> &)queue buffer:(char *)buffer size:(uint32_t)size {
-    uint32_t ret = 0;
-    ret = min(size, (uint32_t)queue.size());
-    for (int i = 0; i < ret; ++i) {
-        buffer[i] = queue.back();
-        queue.pop_back();
-    }
-    return ret;
-}
 
-- (uint32_t)writeStrFromDeque:(deque<char> &)queue buffer:(char *)buffer size:(uint32_t)size {
-    uint32_t ret = 0;
-    ret = min(size, bufferSize - (uint32_t)queue.size());
-    for (int i = 0; i < ret; ++i) {
-        queue.push_front(buffer[i]);
-    }
-    return ret;
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+//- (void)testPerformanceExample {
+//    // This is an example of a performance test case.
+//    [self measureBlock:^{
+//        // Put the code you want to measure the time of here.
+//    }];
+//}
 
 @end
