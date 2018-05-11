@@ -21,7 +21,14 @@
 
 - (void)lyCompressVideo:(NSString *)path;
 
-- (void)lyConvertBGRAtoRGBA:(unsigned char *)data withSize:(size_t)sizeOfData;
+
+/**
+ BGRA格式转成RGBA格式
+
+ @param data    BGRA格式的二进制数据
+ @param size    数据长度
+ */
+- (void)lyConvertBGRAtoRGBA:(unsigned char *)data withSize:(size_t)size;
 
 #pragma mark - get
 

@@ -144,15 +144,15 @@
     return image;
 }
 
-- (void)lyConvertBGRAtoRGBA:(unsigned char *)data withSize:(size_t)sizeOfData {
-    for (unsigned char *p = data; p < data + sizeOfData; p += 4) {
+- (void)lyConvertBGRAtoRGBA:(unsigned char *)data withSize:(size_t)size {
+    for (unsigned char *p = data; p + 2 < data + size; p += 4) {
         unsigned char r = *(p + 2);
         unsigned char b = *p;
         *p = r;
         *(p + 2) = b;
     }
 }
-
+ 
 
 
 - (void)lyCompressVideo:(NSString *)path

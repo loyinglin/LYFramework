@@ -12,6 +12,7 @@
 		FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */; };
 		FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426DF1D2B834C003BC203 /* CVUtil.m */; };
 		FD3426E21D2B8477003BC203 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3426E11D2B8477003BC203 /* abc.png */; };
+		FD44FBD7208396990078CA73 /* UIView+LYUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD44FBD6208396990078CA73 /* UIView+LYUtil.m */; };
 		FD5FCCCF1CF322D40094752B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCCE1CF322D40094752B /* main.m */; };
 		FD5FCCD21CF322D40094752B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCD11CF322D40094752B /* AppDelegate.m */; };
 		FD5FCCD51CF322D40094752B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FCCD41CF322D40094752B /* ViewController.m */; };
@@ -67,6 +68,8 @@
 		FD3426DE1D2B834C003BC203 /* CVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUtil.h; sourceTree = "<group>"; };
 		FD3426DF1D2B834C003BC203 /* CVUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVUtil.m; sourceTree = "<group>"; };
 		FD3426E11D2B8477003BC203 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = SOURCE_ROOT; };
+		FD44FBD5208396990078CA73 /* UIView+LYUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LYUtil.h"; sourceTree = "<group>"; };
+		FD44FBD6208396990078CA73 /* UIView+LYUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYUtil.m"; sourceTree = "<group>"; };
 		FD5FCCCA1CF322D40094752B /* LYFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5FCCCE1CF322D40094752B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD5FCCD01CF322D40094752B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				FDC638061D349350002F40BE /* UIImage+LYUtil.m */,
 				FDB306B51DACC2D2006501D2 /* UIView+LYLayout.h */,
 				FDB306B61DACC2D2006501D2 /* UIView+LYLayout.m */,
+				FD44FBD5208396990078CA73 /* UIView+LYUtil.h */,
+				FD44FBD6208396990078CA73 /* UIView+LYUtil.m */,
 				FDDDE6BD1ECAECCB00174600 /* UIImage+gifUtil.h */,
 				FDDDE6BE1ECAECCB00174600 /* UIImage+gifUtil.m */,
 			);
@@ -450,6 +455,7 @@
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
 				FD65AC481D20D20800C5C1A4 /* NSObject+LYTypeConversion.m in Sources */,
 				FD65AC461D20D20800C5C1A4 /* LYTypeEncoding.m in Sources */,
+				FD44FBD7208396990078CA73 /* UIView+LYUtil.m in Sources */,
 				FD07F0A62050DFEA002A4B73 /* KSCircleBuffer.mm in Sources */,
 				FD8BC4341D9B6FCA00BF9AB2 /* CaptureStreamUtil.m in Sources */,
 				FD65AC4B1D20D20800C5C1A4 /* NSObject+LYUITipsView.m in Sources */,
