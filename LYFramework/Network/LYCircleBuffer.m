@@ -28,7 +28,7 @@
 
 - (instancetype)initWithBufferSize:(uint32_t)size {
     if (self = [super init]) {
-        self.mCircleBuffer = malloc(size + 1);
+        self.mCircleBuffer = (char *)malloc(size + 1);
         bzero(self.mCircleBuffer, size);
         self.mReadPosition = self.mWritePosition = 0;
         self.mBufferSize = size + 1; // +1 是因为self.mReadPosition = self.mWritePosition的时候，无法区分为空还是满的，故而+1，并且定义这种行为是为空
