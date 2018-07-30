@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD07F0A62050DFEA002A4B73 /* KSCircleBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD07F0A52050DFEA002A4B73 /* KSCircleBuffer.mm */; };
 		FD07F0A92050E0A0002A4B73 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD78B241202AD8E800D1A5D4 /* libstdc++.tbd */; };
+		FD093BDC20F343790019D1A4 /* LYThread.m in Sources */ = {isa = PBXBuildFile; fileRef = FD093BDB20F343790019D1A4 /* LYThread.m */; };
 		FD3426D91D2AA7A3003BC203 /* ChatUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */; };
 		FD3426E01D2B834C003BC203 /* CVUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3426DF1D2B834C003BC203 /* CVUtil.m */; };
 		FD3426E21D2B8477003BC203 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3426E11D2B8477003BC203 /* abc.png */; };
@@ -64,6 +65,8 @@
 		FD07F0A42050DFEA002A4B73 /* KSCircleBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSCircleBuffer.h; sourceTree = "<group>"; };
 		FD07F0A52050DFEA002A4B73 /* KSCircleBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCircleBuffer.mm; sourceTree = "<group>"; };
 		FD07F0A72050E053002A4B73 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		FD093BDA20F343790019D1A4 /* LYThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYThread.h; sourceTree = "<group>"; };
+		FD093BDB20F343790019D1A4 /* LYThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYThread.m; sourceTree = "<group>"; };
 		FD3426D81D2AA7A3003BC203 /* ChatUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUtilTest.m; sourceTree = "<group>"; };
 		FD3426DE1D2B834C003BC203 /* CVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUtil.h; sourceTree = "<group>"; };
 		FD3426DF1D2B834C003BC203 /* CVUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVUtil.m; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				FD65AC371D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m */,
 				FD65AC381D20D20800C5C1A4 /* NSObject+LYTypeConversion.h */,
 				FD65AC391D20D20800C5C1A4 /* NSObject+LYTypeConversion.m */,
+				FD093BDA20F343790019D1A4 /* LYThread.h */,
+				FD093BDB20F343790019D1A4 /* LYThread.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				FD65AC4C1D20D20800C5C1A4 /* UIImage+Blur.m in Sources */,
 				FDB306B71DACC2D2006501D2 /* UIView+LYLayout.m in Sources */,
 				FDC638071D349350002F40BE /* UIImage+LYUtil.m in Sources */,
+				FD093BDC20F343790019D1A4 /* LYThread.m in Sources */,
 				FD65AC471D20D20800C5C1A4 /* NSDictionary+LYDictToObject.m in Sources */,
 				FD8BC4351D9B6FCA00BF9AB2 /* CaptureUtil.m in Sources */,
 				FD5FCCD51CF322D40094752B /* ViewController.m in Sources */,
